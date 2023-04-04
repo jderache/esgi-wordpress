@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    background-color: lightgray;
+    font-family: 'Lato', sans-serif;
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  body > div{
+    padding: 0 20px;
+  }
+  #header a {
+    color: black;
+  }
+  h1{
+    font-weight: bold;
+  }
+
+  div.menu-nav{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 20px ;
+  }
+
+footer{
+  padding: 0 20px;
+}
+
+nav ul li a, nav ul li a:visited, nav ul li a:active, .menu-menu-principal-container ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.header nav a:hover {
+  background-size: 100% 100%;
+}
+.header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  font-size: 20px;
+  padding: 0;
+  position: relative;
+}
+
+.header nav .menu-item-has-children .sub-menu {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.header nav .menu-item-has-children:hover .sub-menu {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.header nav .menu-item-has-children .sub-menu::before {
+  content: '';
+  display: block;
+  height: 20px;
+  left: 0;
+  top: -20px;
+  width: 100%;
+  position: absolute;
+}
+
+.header nav ul .sub-menu {
+  flex-direction: column;
+  position: absolute;
+  background-color: white;
+  margin-top: 20px;
+  padding: 20px;
+  transition: 0.2s;
+}
+.header nav ul .sub-menu li a{
+  font-size: 15px;
+}
+
+.header nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  background: linear-gradient(to top, white 0%, white 4px, transparent 5px) no-repeat;
+  padding-bottom: 6px;
+  background-size: 40% 100%;
+  transition: background-size 0.3s;
+}
+section.posts{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+article.post{
+  width: 44%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;  
+}
+article.post img{
+  max-width: 450.56px;
+  min-width: 100%;
+  max-height: 225px;
+  object-fit: cover;
+}
+section.single-post {
+  width: calc(100% - 40px);
+  display: flex;
+  padding: 0 20px;
+}
+section.single-post article.post{
+  width: 100%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;  
+}
+@media screen and (max-width:747px) {
+  div.menu-nav{
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+  }
+}
