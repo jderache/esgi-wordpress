@@ -8,8 +8,7 @@
                 <?php the_post_thumbnail(); ?>
 
                 <p class="post__meta">
-                    Publié le <?php the_time(get_option('date_format')); ?>
-                    par <?php the_author(); ?> • <?php comments_number(); ?>
+                    Publié le <?php the_time(get_option('date_format')); ?> - <?php the_category($separator = '-'); ?> - <?php comments_number(); ?>
                 </p>
 
                 <?php the_excerpt(); ?>

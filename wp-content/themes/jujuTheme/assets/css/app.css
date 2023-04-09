@@ -1,5 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+
+/* Background personnalisé en fonction de la catégorie */
+
+body.category-science-fiction{
+    background-color: rgba(255, 255, 255, 0.3);
+    background-image: url('/wp-content/themes/jujuTheme/assets/img/science-fiction.png');
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+body.category-comedie{
+    background-color: rgba(255, 255, 255, 0.3);
+    background-image: url('/wp-content/themes/jujuTheme/assets/img/comedie.png');
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+body.category-horreur{
+    background-color: rgba(255, 255, 255, 0.3);
+    background-image: url('/wp-content/themes/jujuTheme/assets/img/horreur.png');
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+body.category-action{
+    background-color: rgba(255, 255, 255, 0.3);
+    background-image: url('/wp-content/themes/jujuTheme/assets/img/action.png');
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+body.category-western{
+    background-color: rgba(255, 255, 255, 0.3);
+    background-image: url('/wp-content/themes/jujuTheme/assets/img/western.png');
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 body {
     background-color: lightgray;
     font-family: 'Lato', sans-serif;
@@ -49,6 +88,7 @@ nav ul li a, nav ul li a:visited, nav ul li a:active, .menu-menu-principal-conta
   visibility: hidden;
   opacity: 0;
   transform: translateY(20px);
+  z-index: 5;
 }
 
 .header nav .menu-item-has-children:hover .sub-menu {
@@ -88,13 +128,20 @@ nav ul li a, nav ul li a:visited, nav ul li a:active, .menu-menu-principal-conta
   background-size: 40% 100%;
   transition: background-size 0.3s;
 }
+section.posts a {
+  text-decoration: none;
+  color: black;
+}
+section.posts a.post__link:hover {
+  text-decoration: underline;
+}
 section.posts{
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
 article.post{
-  width: 44%;
+  max-width: 450.56px;
   padding: 20px;
   background-color: white;
   border-radius: 10px;  
@@ -116,6 +163,98 @@ section.single-post article.post{
   background-color: white;
   border-radius: 10px;  
 }
+/* style pour la section de commentaires */
+.comments-area {
+  padding: 30px;
+  background-color: #f5f5f5;
+}
+
+.comments-title {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.comment-author.vcard{
+  width: 10px;
+}
+ol.comment-list, ol.children {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ol.children{
+  margin-left: 40px;
+}
+div.comment-body{
+  background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.comment-form {
+  border-top: 1px solid #ccc;
+}
+
+.comment-form input[type=text],
+.comment-form input[type=email],
+.comment-form input[type=url],
+.comment-form textarea {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.comment-form input[type=submit] {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.comment-form input[type=submit]:hover {
+  background-color: #444;
+}
+
+/* style pour le formulaire de contact */
+
+.wpcf7-form p {
+  margin: 0 0 10px;
+}
+
+.wpcf7-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.wpcf7-form input[type="text"],
+.wpcf7-form input[type="email"],
+.wpcf7-form textarea {
+  width: 90%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.wpcf7-form input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.wpcf7-response-output {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.site__footer{
+  margin: 30px 0;
+}
+
 @media screen and (max-width:747px) {
   div.menu-nav{
     justify-content: space-evenly;

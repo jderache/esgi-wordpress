@@ -6,12 +6,12 @@
             <article class="post">
                 <a href="<?php the_permalink(); ?>" class="">
                     <h2><?php the_title(); ?></h2>
+                    <p>Catégorie <?php the_category($separator = '-'); ?></p>
 
                     <?php the_post_thumbnail(); ?>
 
                     <p class="post__meta">
-                        Publié le <?php the_time(get_option('date_format')); ?>
-                        par <?php the_author(); ?> • <?php comments_number(); ?>
+                        Publié le <?php the_time(get_option('date_format')); ?> - <?php the_category($separator = '-'); ?> - <?php comments_number(); ?>
                     </p>
 
                     <?php the_excerpt(); ?>
