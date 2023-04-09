@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+/* Background personnalisé en fonction de la catégorie */
+
+body.category-science-fiction{
+    background-color: rgba(255, 255, 255, 0.3);
+    background-image: url('/wp-content/themes/jujuTheme/assets/img/science-fiction.png');
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+body.category-comedie{
+    background-color: rgba(255, 255, 255, 0.3);
+    background-image: url('/wp-content/themes/jujuTheme/assets/img/comedie.png');
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+body.category-horreur{
+    background-color: rgba(255, 255, 255, 0.3);
+    background-image: url('/wp-content/themes/jujuTheme/assets/img/horreur.png');
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+body.category-action{
+    background-color: rgba(255, 255, 255, 0.3);
+    background-image: url('/wp-content/themes/jujuTheme/assets/img/action.png');
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+body.category-western{
+    background-color: rgba(255, 255, 255, 0.3);
+    background-image: url('/wp-content/themes/jujuTheme/assets/img/western.png');
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body {
+    background-color: lightgray;
+    font-family: 'Lato', sans-serif;
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  body > div{
+    padding: 0 20px;
+  }
+  #header a {
+    color: black;
+  }
+  h1{
+    font-weight: bold;
+  }
+
+  div.menu-nav{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 20px ;
+  }
+
+footer{
+  padding: 0 20px;
+}
+
+nav ul li a, nav ul li a:visited, nav ul li a:active, .menu-menu-principal-container ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.header nav a:hover {
+  background-size: 100% 100%;
+}
+.header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  font-size: 20px;
+  padding: 0;
+  position: relative;
+}
+
+.header nav .menu-item-has-children .sub-menu {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  z-index: 5;
+}
+
+.header nav .menu-item-has-children:hover .sub-menu {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.header nav .menu-item-has-children .sub-menu::before {
+  content: '';
+  display: block;
+  height: 20px;
+  left: 0;
+  top: -20px;
+  width: 100%;
+  position: absolute;
+}
+
+.header nav ul .sub-menu {
+  flex-direction: column;
+  position: absolute;
+  background-color: white;
+  margin-top: 20px;
+  padding: 20px;
+  transition: 0.2s;
+}
+.header nav ul .sub-menu li a{
+  font-size: 15px;
+}
+
+.header nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  background: linear-gradient(to top, white 0%, white 4px, transparent 5px) no-repeat;
+  padding-bottom: 6px;
+  background-size: 40% 100%;
+  transition: background-size 0.3s;
+}
+section.posts a {
+  text-decoration: none;
+  color: black;
+}
+section.posts a.post__link:hover {
+  text-decoration: underline;
+}
+section.posts{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+article.post{
+  max-width: 425.56px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+article.post img{
+  max-width: 420.56px;
+  min-width: 100%;
+  max-height: 225px;
+  object-fit: cover;
+}
+section.single-post {
+  width: calc(100% - 40px);
+  display: flex;
+  padding: 0 20px;
+}
+section.single-post article.post{
+  width: 100%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;  
+}
+/* style pour la section de commentaires */
+.comments-area {
+  padding: 30px;
+  background-color: #f5f5f5;
+}
+
+.comments-title {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.comment-author.vcard{
+  width: 10px;
+}
+ol.comment-list, ol.children {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ol.children{
+  margin-left: 40px;
+}
+div.comment-body{
+  background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.comment-form {
+  border-top: 1px solid #ccc;
+}
+
+.comment-form input[type=text],
+.comment-form input[type=email],
+.comment-form input[type=url],
+.comment-form textarea {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.comment-form input[type=submit] {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.comment-form input[type=submit]:hover {
+  background-color: #444;
+}
+
+/* style pour le formulaire de contact */
+
+.wpcf7-form p {
+  margin: 0 0 10px;
+}
+
+.wpcf7-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.wpcf7-form input[type="text"],
+.wpcf7-form input[type="email"],
+.wpcf7-form textarea {
+  width: 90%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.wpcf7-form input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.wpcf7-response-output {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.site__footer{
+  margin: 30px 0;
+}
+
+@media screen and (max-width:747px) {
+  div.menu-nav{
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+  }
+}
